@@ -20,7 +20,7 @@ export class AppComponent {
   items: Observable<any[]>;
   differs: IterableDiffers;
   constructor(db:AngularFireDatabase,private _compiler: Compiler){
-    this.items = db.list('/cnt').valueChanges();
+    this.items = db.list('/').valueChanges();
     this.items.subscribe(res=> {
       this.dataa.push(res[0])
       console.log(this.dataa)
